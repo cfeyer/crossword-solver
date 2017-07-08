@@ -1,0 +1,12 @@
+Filters:
+- highest degree (most words formed) - makes denser, harder board
+- longest word
+** highest score **
+- use certain tile
+- use certain space
+- use most tiles
+
+- load real Scrabble dictionary
+- eliminate equivalent solutions (primary <--> secondary complements)
+
+** GUI **

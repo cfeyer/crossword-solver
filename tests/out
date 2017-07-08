@@ -1,0 +1,186 @@
+PermuteTestCase::test_null : OK
+PermuteTestCase::test_single_object : OK
+PermuteTestCase::test_two_unique_objects : OK
+PermuteTestCase::test_two_identical_objects : OK
+PermuteTestCase::test_three_unique_objects : OK
+PermuteTestCase::test_single_wildcard : OK
+PermuteTestCase::test_two_wildcards : OK
+DictionaryTestCase::test_with_some_stuffDictionary does not contain 'apple'.
+Dictionary does not contain 'orange'.
+Dictionary does not contain 'pear'.
+Dictionary does not contain 'banana'.
+Dictionary contains 'apple'.
+Dictionary contains 'orange'.
+Dictionary contains 'pear'.
+Dictionary does not contain 'banana'.
+Dictionary hit count: 8
+ : OK
+DictionaryTestCase::test_hit_countDictionary does not contain 'dog'.
+Dictionary does not contain 'dog'.
+Dictionary does not contain 'dog'.
+Dictionary does not contain 'dog'.
+Dictionary hit count: 4
+ : OK
+BoardTestCase::test_undefined_board : OK
+BoardTestCase::test_small_board : OK
+BoardTestCase::test_bigger_board : OK
+RackTestCase::test_empty : OK
+RackTestCase::test_one_tileRack has 1 unique permutations
+ : OK
+RackTestCase::test_two_unique_tilesRack has 4 unique permutations
+ : OK
+RackTestCase::test_three_unique_tilesRack has 15 unique permutations
+ : OK
+RackTestCase::test_seven_unique_tilesRack has 13699 unique permutations
+ : OK
+ConstraintTestCase::test_emptyDictionary does not contain ''.
+Dictionary hit count: 1
+ : OK
+ConstraintTestCase::test_primary_succeeds_no_secondariesDictionary contains 'llama'.
+Dictionary hit count: 1
+ : OK
+ConstraintTestCase::test_primary_fails_no_secondariesDictionary does not contain 'llaza'.
+Dictionary hit count: 1
+ : OK
+ConstraintTestCase::test_primary_succeeds_secondary_failsDictionary does not contain 'goosm'.
+Dictionary contains 'llama'.
+Dictionary does not contain 'goosm'.
+Dictionary hit count: 3
+ : OK
+ConstraintTestCase::test_primary_succeeds_secondary_succeedsDictionary contains 'goose'.
+Dictionary contains 'gus'.
+Dictionary contains 'goose'.
+Dictionary contains 'gus'.
+Dictionary hit count: 4
+ : OK
+ConstraintTestCase::test_primary_fails_secondary_failsDictionary does not contain 'loose'.
+Dictionary does not contain 'loose'.
+Dictionary does not contain 'loose'.
+Dictionary hit count: 3
+ : OK
+ConstraintTestCase::test_constraint_degree_0 : OK
+ConstraintTestCase::test_constraint_degree_1 : OK
+ConstraintTestCase::test_constraint_degree_2 : OK
+ConstraintTestCase::test_constraint_degree_3 : OK
+ConstraintTestCase::test_equality_primary_constraint_only : OK
+ConstraintTestCase::test_equality_w_secondary_constraints : OK
+ConstraintTestCase::test_less_than_primary_constraint_only : OK
+ConstraintTestCase::test_less_than_w_secondary_constraints : assertion
+ScorerTests::test_scorer_ctor : OK
+ScorerTests::test_invoke_scorer : OK
+ScorerTests::test_oversimplified : assertion
+SolverTests::test_solver_ctor : OK
+SolverTests::test_solve_simple_board_1Rack has 1 unique permutations
+Dictionary contains 'ew'.
+Dictionary does not contain 'e'.
+Dictionary contains 'ew'.
+Solution: e (constraint r0,c1,DOWN,degree 1,'0w')
+Dictionary contains 'ew'.
+Solution: e (constraint r1,c0,RIGHT,degree 1,'0w')
+Dictionary contains 'ew'.
+Dictionary does not contain 'e'.
+Dictionary does not contain 'we'.
+Dictionary does not contain 'we'.
+Dictionary does not contain 'we'.
+Dictionary does not contain 'we'.
+Dictionary hit count: 10
+ : OK
+SolverTests::test_solve_simple_board_2Rack has 1 unique permutations
+Dictionary does not contain 'ew'.
+Dictionary does not contain 'ew'.
+Dictionary does not contain 'ew'.
+Dictionary does not contain 'ew'.
+Dictionary contains 'we'.
+Solution: e (constraint r1,c1,RIGHT,degree 1,'w0')
+Dictionary contains 'we'.
+Dictionary does not contain 'e'.
+Dictionary contains 'we'.
+Dictionary does not contain 'e'.
+Dictionary contains 'we'.
+Solution: e (constraint r1,c1,DOWN,degree 1,'w0')
+Dictionary hit count: 10
+ : OK
+SolverTests::test_solve_simple_board_3Rack has 1 unique permutations
+Board:
+   0 0 0 
+   0 1 2 
+
+00 - - - 
+01 - w - 
+02 - - - 
+
+Rack:
+0 1 2 3 4 5 6 
+e - - - - - - 
+
+Dictionary:
+2 words in dictionary
+
+Dictionary contains 'ew'.
+Dictionary does not contain 'e'.
+Dictionary contains 'ew'.
+Solution: e (constraint r0,c1,DOWN,degree 1,'0w')
+Dictionary contains 'ew'.
+Solution: e (constraint r1,c0,RIGHT,degree 1,'0w')
+Dictionary contains 'ew'.
+Dictionary does not contain 'e'.
+Dictionary contains 'we'.
+Solution: e (constraint r1,c1,RIGHT,degree 1,'w0')
+Dictionary contains 'we'.
+Dictionary does not contain 'e'.
+Dictionary contains 'we'.
+Dictionary does not contain 'e'.
+Dictionary contains 'we'.
+Solution: e (constraint r1,c1,DOWN,degree 1,'w0')
+Expected solution set:
+4 solutions: 
+{ 
+(soln 'e' --> (constraint r0,c1,DOWN,degree 1,'0w') --> {'ew'} ) 
+(soln 'e' --> (constraint r1,c0,RIGHT,degree 1,'0w') --> {'ew'} ) 
+(soln 'e' --> (constraint r1,c1,RIGHT,degree 1,'w0') --> {'we'} ) 
+(soln 'e' --> (constraint r1,c1,DOWN,degree 1,'w0') --> {'we'} ) 
+} 
+
+Actual solution set:
+4 solutions: 
+{ 
+(soln 'e' --> (constraint r0,c1,DOWN,degree 1,'0w') --> {'ew'} ) 
+(soln 'e' --> (constraint r1,c0,RIGHT,degree 1,'0w') --> {'ew'} ) 
+(soln 'e' --> (constraint r1,c1,RIGHT,degree 1,'w0') --> {'we'} ) 
+(soln 'e' --> (constraint r1,c1,DOWN,degree 1,'w0') --> {'we'} ) 
+} 
+
+Dictionary hit count: 12
+ : OK
+SolutionTests::test_solution_ctor : OK
+SolutionTests::test_equality : assertion
+SolutionTests::test_less_than : assertion
+SolutionSetTests::test_solution_set_ctor : OK
+SolutionSetTests::test_equality : assertion
+ConstraintTestCase.cpp:361:Assertion
+Test name: ConstraintTestCase::test_less_than_w_secondary_constraints
+forced failure
+- Test not implemented
+
+ScorerTests.cpp:35:Assertion
+Test name: ScorerTests::test_oversimplified
+forced failure
+- Test not implemented
+
+SolutionTests.cpp:23:Assertion
+Test name: SolutionTests::test_equality
+forced failure
+- Test not implemented
+
+SolutionTests.cpp:32:Assertion
+Test name: SolutionTests::test_less_than
+forced failure
+- Test not implemented
+
+SolutionSetTests.cpp:23:Assertion
+Test name: SolutionSetTests::test_equality
+forced failure
+- Test not implemented
+
+Failures !!!
+Run: 43   Failure total: 5   Failures: 5   Errors: 0
